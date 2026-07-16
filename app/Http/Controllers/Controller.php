@@ -2,24 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use illluminate\http\request;
-class PageController extends Controller
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
+
+class Controller extends BaseController
 {
-    //
-}
-
-}
-
-
-namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-
-class HomeController extends Controller
-{
-    public function index()
-    {
-        return view('home');
-    }
+    use AuthorizesRequests, ValidatesRequests;
 }
 
